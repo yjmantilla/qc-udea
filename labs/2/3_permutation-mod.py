@@ -15,9 +15,9 @@ c = ClassicalRegister(7, 'c')
 ########### PERMUTATION WITH PATTERN 7,0,6,1,5,2,4,3 
 circuit = QuantumCircuit(q, c)
 
-circuit.t(q[0])
-circuit.s(q[1])
-circuit.h(q[2])
+circuit.t(q[0:4])
+circuit.s(q[0:4])
+circuit.h(q[0:4])
 
 circuit= circuit.compose(Permutation(num_qubits = 7, pattern = [0,6,1,5,2,4,3])) # not in-place
 
